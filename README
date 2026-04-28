@@ -1,0 +1,269 @@
+# 🚀 Customer Churn Prediction System
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge&logo=python">
+  <img src="https://img.shields.io/badge/ML-Scikit--Learn-orange?style=for-the-badge">
+  <img src="https://img.shields.io/badge/UI-Streamlit-red?style=for-the-badge&logo=streamlit">
+  <img src="https://img.shields.io/badge/Status-Production--Ready-success?style=for-the-badge">
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge">
+</p>
+
+---
+
+## 📌 Overview
+
+This project is an **end-to-end Machine Learning system** that predicts customer churn for a telecom company.
+
+It includes:
+
+* Modular ML pipeline
+* Feature engineering
+* Model training & evaluation
+* Interactive Streamlit dashboard
+* Business-oriented prediction insights
+
+---
+
+## 🎯 Business Impact
+
+Customer churn prediction helps businesses:
+
+* Reduce customer loss
+* Improve retention strategies
+* Identify high-risk customers early
+
+📌 The model is optimized for **high recall**, ensuring most churners are detected.
+
+---
+
+## 🧠 ML Pipeline
+
+```
+Raw Data → Preprocessing → Feature Engineering → Model → Evaluation → Deployment
+```
+
+---
+
+## 🖥️ Application Interface
+
+![Main UI](assets/dashboard/main_ui.png)
+
+*Interactive Streamlit dashboard displaying customer inputs, churn probability, prediction result, and recommended actions.*
+
+---
+
+## 📊 Prediction Output
+
+![Prediction Output](assets/dashboard/prediction.png)
+
+📌 **Insights:**
+
+* Model provides churn probability along with prediction
+* High-risk customers are clearly highlighted
+* Includes actionable recommendations
+
+---
+
+## 📊 Model Performance
+
+![Confusion Matrix](assets/model/confusion_matrix.png)
+
+📌 **Insights:**
+
+* High recall ensures most churn customers are captured
+* Some false positives are acceptable for business use
+* Helps reduce missed churn cases
+
+---
+
+## 📈 Classification Report
+
+![Classification Report](assets/insights/classification_report.png)
+
+📌 **Insights:**
+
+* Recall for churn class is high
+* Precision is moderate (expected trade-off)
+* Balanced for business decision-making
+
+---
+
+## 🔍 Key Drivers of Churn
+
+![Feature Importance](assets/eda/feature_importance.png)
+
+📌 **Insights:**
+
+* Contract type is the strongest churn driver
+* Customers with low tenure are more likely to churn
+* Lack of support services increases churn risk
+* Higher monthly charges contribute to churn
+
+---
+
+## 🎬 App Demo
+
+![App Demo](assets/demo/app_demo.gif)
+
+*End-to-end demonstration of user input and prediction output.*
+
+---
+
+## 🏗️ Project Structure
+
+```
+CUSTOMER_CHURN_MODEL/
+│
+├── data/
+├── notebooks/
+├── src/
+│   ├── preprocessing.py
+│   ├── feature_engineering.py
+│   ├── train.py
+│   ├── evaluate.py
+│
+├── models/
+├── app/
+│   └── app.py
+│
+├── assets/
+├── requirements.txt
+├── README.md
+└── .gitignore
+```
+
+---
+
+## ⚙️ Tech Stack
+
+* Python
+* Pandas, NumPy
+* Scikit-learn
+* Matplotlib, Seaborn
+* Streamlit
+
+---
+
+## ⚡ Installation
+
+```bash
+git clone https://github.com/your-username/customer-churn-model.git
+cd customer-churn-model
+```
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## ▶️ Usage
+
+### Train Model
+
+```bash
+python src/train.py
+```
+
+Model is trained using `src/train.py`. Run the script to generate the model file.
+
+### Run App
+
+```bash
+streamlit run app/app.py
+```
+
+---
+
+## 🌐 Deployment
+
+### 🚀 Streamlit Cloud
+
+1. Push project to GitHub
+2. Go to Streamlit Cloud
+3. Select repo & deploy
+
+---
+
+### 🐳 Docker Deployment
+
+```dockerfile
+FROM python:3.10
+
+WORKDIR /app
+COPY . .
+
+RUN pip install -r requirements.txt
+
+CMD ["streamlit", "run", "app/app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+```
+
+```bash
+docker build -t churn-app .
+docker run -p 8501:8501 churn-app
+```
+
+---
+
+### ☁️ Cloud Options
+
+* AWS EC2 / ECS
+* GCP Cloud Run
+* Azure App Services
+
+---
+
+## 📈 Future Improvements
+
+* Add XGBoost / LightGBM
+* Handle class imbalance (SMOTE)
+* Add MLflow tracking
+* CI/CD pipeline
+* FastAPI backend
+* Real-time monitoring
+
+---
+
+## ⚠️ Lessons Learned
+
+* Recall is critical in churn prediction
+* Model performance must align with business goals
+* Clean project structure improves scalability
+* Deployment is essential for real-world ML
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome. For major changes, open an issue first.
+
+---
+
+## 📜 License
+
+MIT License
+
+---
+
+## 👤 Author
+
+**Sachin Koranga**
+
+---
+
+## ⭐ Support
+
+If you found this project useful:
+
+👉 Star the repository
+👉 Share with others
+
+---
+
+
+
