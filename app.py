@@ -7,10 +7,10 @@ import seaborn as sns
 from sklearn.metrics import ConfusionMatrixDisplay
 
 
-df = pd.read_csv("C:\\Users\\Vikash\\Desktop\\customer_churn_model\\data\WA_Fn-UseC_-Telco-Customer-Churn.csv")
+df = pd.read_csv("C:data\WA_Fn-UseC_-Telco-Customer-Churn.csv")
 
 # Load model
-with open("C:\\Users\\Vikash\\Desktop\\customer_churn_model\\model\\model_Churn (2).pkl", "rb") as f:
+with open("C:model\\model_Churn (2).pkl", "rb") as f:
     artifact = pickle.load(f)
 
 model = artifact["model"]
@@ -243,7 +243,7 @@ with tab2:
     st.markdown("---")
     st.header("Business Insights from Categorical Analysis")
     
-    insights_brief = "",
+    insights_brief ="",
     "1. Contract Type: Customers on Month-to-month contracts have a significantly higher churn rate compared to those on one or two-year contracts. Encouraging long-term contracts is a primary retention lever.",
     "2. Internet Service: Fiber optic users churn at a much higher rate than DSL users. This may indicate pricing dissatisfaction or service reliability issues specifically within the fiber segment.",
     "3. Payment Method: Customers using **Electronic Checks** are the most likely to churn. This group should be targeted with incentives to switch to automated/recurring payment methods like Credit Card or Bank Transfer.",
