@@ -8,7 +8,7 @@ __pycache__/
 
 .ipynb_checkpoints/
 
-*.pkl
+#*.pkl
 
 .streamlit/secrets.toml
 
